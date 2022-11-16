@@ -1,0 +1,43 @@
+Requirements- 
+	create signup and login pages
+		store account data
+		profile customization
+		redirect to menu page or employee page(manager)
+	create menu page
+		fully interactive for customer
+		pictures of menu items plus price
+		manager and employee menu customization
+	create cart page
+		needs to show selected menu items
+		be able to update quantity of items
+		be able to remove items
+		show total of all cart items
+		show payment options
+		be able to change between payment options
+		otional tip
+		total savings(if they have a deal or coupon)
+		on checkout shows recomendations
+	create a receipt page
+		gives order number
+		gives estimated time until it's ready
+		if delivery(delivery tracker)
+		details of order(order summary)
+		way to cancel an order
+	create manager page
+		add and delete menu items
+		edit prices
+		issue refund
+		customer complaints
+		accept order cancelation
+		display acceptable coupons 
+	misc req-
+		mobile view
+		user interactivity
+		design quality
+		overall functionality
+		bug fixes
+		logout features/forget password
+		
+		
+		
+		
