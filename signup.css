@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body
 {
   color: white;
@@ -183,4 +184,40 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
+=======
+body{
+    background-color: grey;
+}
+
+/* Header CSS */
+
+.header{
+    background-image: url(food-background-selection-spices-herbs-ingredients-cooking-dark-stone-table-long-banner-format-good-web-food-118170735.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    
+}
+
+#headertxt{
+    color: antiquewhite;
+    text-align: center;
+    background-image: url(Edge-Grain-Cutting-Board.jpg);
+    width: 25%;
+    height: 200px;
+}
+
+.Nav{
+    
+    list-style: none;
+    text-decoration: none;
+    color: beige;
+    font-family: cursive;
+    font-size: medium;
+}
+
+.Nav li{
+    text-align: center;
+    margin-bottom: 20px;
+>>>>>>> 778e08eb20944f82755939919b43e45273659058
 }
