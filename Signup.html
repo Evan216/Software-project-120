@@ -18,6 +18,10 @@
 <li><a class="Nav" href="Signup.html"><i><img src="kindpng_6578079.png" alt="" id="signupnavimg"></i></a></li>
 <li><a class="Nav" href="#Login"><i>Login</i></a></li>
 </ul></div>
+<ul id="pagenav">
+<li><a href="#menu">Menu</a></li>
+<li><a href="#Account">Account</a></li>
+</ul>
 </div>
         </div>
 
@@ -144,6 +148,70 @@
     </section>
     <script src="signup.js"></script>
     </section>
+    <br>
 
+    <button
+    class="btn3" id="top"
+    onclick="document.getElementById('id03').style.display='block'"
+    style="width: 150px"
+     class="btn3" style="width: auto">Manager Login</button>
+     <div id="id03" class="modal">
+      <form
+        class="modal-content animate"
+        action="landingpage.html"
+        method="post"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id03').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img src="../Final-Project-115-Version-2/pics/walking gif.gif" alt="Avatar" class="avatar" />
+        </div>
+  
+        <div class="container">
+          <label for="uname"><b>Manager Last Name</b></label>
+          <input
+            type="text"
+            placeholder="Manager Last Name"
+            name="uname"
+            required
+          />
+  
+          <label for="psw"><b>Manager ID</b></label>
+          <input
+            type="password"
+            placeholder="Enter ID"
+            name="psw"
+            required
+          />
+  
+          <a href="landingpage.html"><button type="submit">Log in</button></a>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+  
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id02').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+      </section>
+
+
+
+
+      <section></section>
 </body>
 </html> 
