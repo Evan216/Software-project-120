@@ -7,17 +7,25 @@
 .app {
     height: 20vh;
     width: 50vh;
-    margin: 5vh;
-    float: left;    
+    margin-top: 5vh;    
     color: black;
     
 }
 
+.bread {
+
+}
+
+.add {
+    text-decoration: none;
+}
+
+
 .entrees {
 
-    margin-top: 80vh;
+
 }
 
 .dessert {
-    margin-top: 135vh;
+
 }
