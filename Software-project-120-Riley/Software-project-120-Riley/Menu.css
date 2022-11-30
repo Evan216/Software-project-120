@@ -1,0 +1,31 @@
+html {
+    background: url(https://i.pinimg.com/originals/76/35/1e/76351e8ab2a12734b2f1beae57d4833d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.app {
+    height: 20vh;
+    width: 50vh;
+    margin-top: 5vh;    
+    color: black;
+    
+}
+
+.appetizers, .entrees {
+    margin-top: 30vh;
+    margin: 15vh;
+}
+
+.bread, .main, .dess {
+    float: left;
+    margin: 5vh;
+}
+
+.dessert {
+    margin-top: 150vh;
+    margin-left: 15vh;
+}
+
