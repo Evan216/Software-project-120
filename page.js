@@ -7,7 +7,7 @@ window.onclick = function(event) {
     }
     else
 {
- window.location.href="landingpage.html";
+ window.location.href="Menu.html";
 }
 }
 
@@ -21,19 +21,6 @@ window.onclick = function(event) {
 
 else
 {
- window.location.href="landingpage.html";
-}
-}
-
-var modall = document.getElementById('id03');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    else
-{
- window.location.href="landingpage.html";
+ window.location.href="Menu.html";
 }
 }
