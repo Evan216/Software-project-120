@@ -7,7 +7,7 @@ window.onclick = function(event) {
     }
     else
 {
- window.location.href="landingpage.html";
+ window.location.href="Menu.html";
 }
 }
 
@@ -21,6 +21,6 @@ window.onclick = function(event) {
 
 else
 {
- window.location.href="landingpage.html";
+ window.location.href="Menu.html";
 }
 }
