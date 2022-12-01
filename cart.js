@@ -55,6 +55,7 @@ function addToCartClicked(){
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].imageSrc
+    var imageSrc = shopItem.getElementsByClassName('app')[0].imageSrc
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
@@ -64,6 +65,7 @@ function addItemToCart(title, price, imageSrc){
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-titel')
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for(var i = 0; i < cartItemNames.length; i++){
         if (cartItemNames[i].innerText == title) {
             alert('This item is already added!!')

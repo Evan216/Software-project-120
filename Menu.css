@@ -1,7 +1,11 @@
+
 html {
     background: url(https://i.pinimg.com/originals/76/35/1e/76351e8ab2a12734b2f1beae57d4833d.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+body {
+    background-color: cadetblue;
 }
 
 
@@ -27,5 +31,23 @@ html {
 .dessert {
     margin-top: 150vh;
     margin-left: 15vh;
+}
+
+.bread {
+
+}
+
+.add {
+    text-decoration: none;
+}
+
+
+.entrees {
+
+
+}
+
+.dessert {
+
 }
 

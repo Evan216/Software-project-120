@@ -8,7 +8,7 @@ let users = [
         password: "1234"
         },
     {
-        username: "riley",
+        username: "Riley",
         password: "4321"
     }    
 ]
