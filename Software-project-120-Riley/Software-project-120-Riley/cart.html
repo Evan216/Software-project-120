@@ -64,6 +64,40 @@
                 <strong class="cart-total-title">Total</strong>
                 <span class="cart-total-price">$31.33</span>
             </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+
+            <button class="btn btn-primary btn-purchase" type="button"
+             id="top"
+            onclick="document.getElementById('id02').style.display='block'"
+            style="width: 150px"
+             class="btn3" style="width: auto">Purchase</button>
+             <div id="id02" class="modal">
+              <form
+                class="modal-content animate"
+                action="Menu.html"
+                method="post">
+
+                <div class="imgcontainer">
+                  <span
+                    onclick="document.getElementById('id02').style.display='none'"
+                    class="close"
+                    title="Close Modal"
+                    >&times;</span>
+                </div>
+                <div class="container2">
+                  <h3>Choose Payment Method</h3> 
+                    <button type="submit">PayPal</button> 
+                    <button type="submit">Venmo</button> 
+                    <button type="submit">CashApp</button> 
+                    <button type="submit">Visa/Credit</button>  
+                </div>
+              </form>              
+             </div>
+        </div>
+        </div>
+        
+        
+
+
+            <script src="cart.js"></script>
 </body>
 </html>
