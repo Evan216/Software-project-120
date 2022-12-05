@@ -21,7 +21,7 @@ function login() {
 
   if (localStorage.getItem(username) === password) {
     alert('Login successful');
-
+    window.location.href="Menu.html"
   }
     else {
       alert('Login failed');
@@ -39,11 +39,12 @@ function register() {
 
   if (localStorage.getItem(registerUser) !== null) {
     alert("Username already exists");}
-
-  localStorage.setItem(registerUser, registerPassword);
-  alert("Registration successful");
+    
+  else{localStorage.setItem(registerUser, registerPassword);
+    alert("Registration successful");}
 
 users.push({registerUser, registerPassword});
+
 }
 
 // function to alert login needed for access to page
