@@ -27,7 +27,6 @@ for (var i= 0; i < removeCartItemButtons.length; i++){
 }
 
 function purchaseClicked(){
-    alert('Thank you for your buisness')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()){
         cartItems.removeChild(cartItems.firstChild)
