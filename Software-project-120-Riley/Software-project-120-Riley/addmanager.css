@@ -1,113 +1,46 @@
-body{
-    background-color: beige;
+html {
+    background: url(https://i.pinimg.com/originals/76/35/1e/76351e8ab2a12734b2f1beae57d4833d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.cart-header {
-    font-weight: bold;
-    font-size: 1.25em;
-    color: #333;
-}
-
-.cart-column {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-    margin-right: 1.5em;
-    padding-bottom: 10px;
-    margin-top: 10px;
-}
-
-.cart-row {
-    display: flex;
-}
-
-.cart-item {
-    width: 45%;
-}
-
-.cart-price {
-    width: 20%;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.cart-quantity {
-    width: 35%;
-}
-
-.cart-item-title {
-    color: #333;
-    margin-left: .5em;
-    font-size: 1.2em;
-}
-
-.cart-item-image {
-    width: 75px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.btn-danger {
-    color: white;
-    background-color: #EB5757;
-    border: none;
-    border-radius: .3em;
-    font-weight: bold;
-}
-
-.btn-danger:hover {
-    background-color: #CC4C4C;
-}
-
-.cart-quantity-input {
-    height: 34px;
-    width: 50px;
-    border-radius: 5px;
-    border: 1px solid #56CCF2;
-    background-color: #eee;
-    color: #333;
-    padding: 0;
-    text-align: center;
-    font-size: 1.2em;
-    margin-right: 25px;
-}
-
-.cart-row:last-child {
-    border-bottom: 1px solid black;
-}
-
-.cart-row:last-child .cart-column {
-    border: none;
-}
-
-.cart-total {
-    text-align: end;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.cart-total-title {
-    font-weight: bold;
-    font-size: 1.5em;
+.app {
+    height: 20vh;
+    width: 50vh;
+    margin-top: 5vh;    
     color: black;
-    margin-right: 20px;
+    
 }
 
-.cart-total-price {
-    color: #333;
-    font-size: 1.1em;
+.appetizers  {
+    margin-left: 15vh;
+    margin-top: 30vh;
+    
 }
 
-.btn-purchase {
-    display: block;
-    margin: 40px auto 80px auto;
-    font-size: 1.75em;
-    border-radius: 50px;
-    background-color: black;
-    color: beige;
+.bread, .main, .dess {
+    float:left;
+    margin: 5vh;
 }
 
-#snakey {
+
+.entrees{
+    margin-top: 200vh;
+    margin-left: 15vh;
+}
+.dessert {
+    margin-top: 300vh;
+    margin-left: 15vh;
+}
+
+.arrow {
+    height:10vh;
+    margin-top: 70vh;
+}
+
+
+#snakey
+{
     position:fixed;
     top: 20%;
     right: 37%;
@@ -115,11 +48,12 @@ body{
     pointer-events:none
 }
 
-.cat {
-  margin-top: 20%;
-  margin-left: 41%;
-  justify-self: center;
-  display: inline-block;
+.cat
+{
+     margin-top: 20%;
+    margin-left: 41%;
+    justify-self: center;
+display: inline-block;
 }
 
 
@@ -177,6 +111,7 @@ button:hover {
 
 
 .container {
+  background-color: rgba(0, 0, 0, 0.085);
   padding: 16px;
 }
 
@@ -196,7 +131,7 @@ span.psw {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color:#888; /* Fallback color */
-  background-color: #888; /* Black w/ opacity */
+  background-color: #888); /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -254,7 +189,13 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
-#sig {
+
+
+.btn3 {
+    
+}
+#sig
+{
     margin-bottom: 20px;
     height: 30px;
     text-align: center;
@@ -296,7 +237,8 @@ button {
   cursor: pointer;
   width: 100%;
 }
-#b {
+#b
+{
   background-color: rgba(0, 128, 255, 0.664);
 }
 
@@ -313,6 +255,7 @@ button:hover {
 
 /* Center the image and position the close button */
 .imgcontainer {
+  
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
@@ -323,10 +266,7 @@ img.avatar {
   border-radius: 50%;
 }
 
-.container {
-  background-color: none;
-  padding: 16px;
-}
+
 
 span.psw {
   float: right;
@@ -343,13 +283,14 @@ span.psw {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  
+  background-color: black;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
@@ -364,7 +305,8 @@ span.psw {
   font-size: 35px;
   font-weight: bold;
 }
-#bl {
+#bl
+{
   color:rgb(0, 128, 255);
 }
 
@@ -401,9 +343,105 @@ span.psw {
   }
 }
 
-.rec-row{
-  float: left;
-  margin: 30px;
-  border: solid;
-  padding: 10px;
+
+.container {
+  background-color: #888;
+  padding: 16px;
+}
+
+.mainAddButton {
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+
+///
+
+
+.wrapper {
+  width: 500px;
+  background-color: white;
+  padding: 10px 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputSm {
+  width: 25%;
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extraItems {
+  margin: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.extraItem {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid tomato;
+  background-color: white;
+  color: tomato;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addButton {
+  width: 25%;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 0;
+  align-self: flex-end;
 }
