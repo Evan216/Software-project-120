@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="Header.css">
     <title>Jaz Malvagio</title>
 </head>
+<body>
 <script></script>
     <!-- Universal? header -->
     <section class="header">
-        <div class="header">
-<div id="headertxt">
-<h1 id="Title">Jaz Malvagio</h1>
-<h4>"Evil food for your heroic appertite"</h4>
-<div><ul class="Nav">
-<li><a class="Nav" href="Signup.html"><img src="kindpng_6578079.png" alt="" id="signupnavimg" id="signupnavimg"></a></li>
-<li><a class="Nav" href="#Login"><i>Login</i></a></li>
-</ul></div>
-<ul id="pagenav">
-<li><a href="Menu.html">Menu</a></li>
-<li><a href="#Account">Account</a></li>
-<li><a href="cart.html">Cart</a></li>
-</ul>
-</div>
-        </div>
-</section>
+      <div class="header">
+  <div id="headertxt">
+  <h1 id="Title">Jaz Malvagio</h1>
+  <h4>"Evil food for your heroic appertite"</h4>
+  <div><ul class="Nav">
+  <li><a class="Nav" href="Menu.html"><img src="kindpng_6578079.png" alt="" id="signupnavimg"><i>Menu</i></a></li>
+  <li><a class="Nav" href="cart.html"><img src="menuimg/pngwing.com (1).png" alt="" id="signupnavimg"><i>Cart</i></a></li>
+  <li><a class="Nav" href="signup.html"><img src="menuimg/pngwing.com.png"alt="" id="signupnavimg"><i>Account</i></a></li>
+  </ul>
+  </div>
+  
+  </div>
+      </div>
+  </section>
         <button
     class="btn3" id="top"
     onclick="document.getElementById('id02').style.display='block'"
@@ -35,21 +34,22 @@
      <div id="id02" class="modal">
       <form
         class="modal-content animate"
-        action="landingpage.html"
-        method="post"
       >
         <div class="imgcontainer">
           <span
             onclick="document.getElementById('id02').style.display='none'"
             class="close"
             title="Close Modal"
-            >&times;</span>
+            >&times;</span
+          >
           <img src="../Final-Project-115-Version-2/pics/walking gif.gif" alt="Avatar" class="avatar" />
         </div>
+</section>
   
         <div class="container">
           <label for="uname"><b>Username</b></label>
           <input
+            id="username"
             type="text"
             placeholder="Enter Username"
             name="uname"
@@ -58,13 +58,14 @@
   
           <label for="psw"><b>Password</b></label>
           <input
+          id="password"
             type="password"
             placeholder="Enter Password"
             name="psw"
             required
           />
-  
-          <a href="landingpage.html"><button type="submit">Log in</button></a>
+
+          <button type="submit" onclick="login()">Log in</button></a>
           <label>
             <input type="checkbox" checked="checked" name="remember" /> Remember
             me
@@ -97,7 +98,6 @@
   <div id="id01" class="modal">
     <form
       class="modal-content animate"
-      action="/Final-Project-115-Version-2/landingpage.html"
       method="post"
     >
       <div class="imgcontainer">
@@ -113,6 +113,7 @@
       <div class="container">
         <label for="uname"><b>Username</b></label>
         <input
+        id="newUserName"
           type="text"
           placeholder="Enter Username"
           name="uname"
@@ -121,13 +122,14 @@
 
         <label for="psw"><b>Password</b></label>
         <input
+        id="newPassword"
           type="password"
           placeholder="Enter Password"
           name="psw"
           required
         />
 
-        <a href="landingpage.html"><button type="submit" id="b">Sign up</button></a>
+        <button type="submit" id="b" onclick="register()">Sign up</button>
         <label>
           <input type="checkbox" checked="checked" name="remember" /> Remember
           me
@@ -209,6 +211,7 @@
       </form>
     </div>
       </section>
+    
 
 
 
@@ -216,5 +219,6 @@
       <section></section>
       <script src="signup.js"></script>
       <script src="login-signup.js"></script>
+      <sript src="page.js"></sript>
 </body>
 </html> 

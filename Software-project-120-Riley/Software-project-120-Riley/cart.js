@@ -151,15 +151,3 @@ function feature(){
     alert('please login to use this feature!!')
 }
 
-//function to add recomended 
-function addItemToCart(title, price, imageSrc){
-    var recRow = document.createElement('div')
-    recRow.classList.add('rec-row')
-    var recItems = document.getElementsByClassName('rec-items')[0]
-    var recItemNames = recItems.getElementsByClassName('rec-item-title')
-    for(var i = 0; i < recItemNames.length; i++){
-        if (recItemNames[i].innerText == title) {
-            alert('This item is already added!!')
-            return
-        }
-    }
