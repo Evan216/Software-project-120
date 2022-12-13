@@ -65,6 +65,14 @@
                 <span class="cart-total-price">$31.33</span>
             </div>
 
+            <div class="payment">
+            <a href="https://www.paypal.com/signin" target="_blank"><span ><button class="pay" style="width: 200px;">PayPal</button></span></a>
+            <a href="https://account.venmo.com/sign-in" target="_blank"><span ><button class="pay" style="width: 200px;">Venmo</button></span></a>
+            <span ><button class="pay" style="width: 200px;"> At store/Cash</button></span>
+            <span ><button class="pay" style="width: 200px;">Credit/Debit</button></span>
+            </div>
+
+
             <button class="btn btn-primary btn-purchase" type="button"
              id="top"
             onclick="document.getElementById('id02').style.display='block'"
@@ -83,19 +91,101 @@
                     title="Close Modal"
                     >&times;</span>
                 </div>
-                <div class="container2">
-                  <h3>Choose Payment Method</h3> 
-                    <button type="submit">PayPal</button> 
-                    <button type="submit">Venmo</button> 
-                    <button type="submit">CashApp</button> 
-                    <button type="submit">Visa/Credit</button>  
-                </div>
+
+
+                <section class="container content-section">
+                    <h1 class="section-header">Receipt</h1> 
+                    <h2 class="section-header">Order Summary</h2> 
+                    <span><h3>Order Number:</h3><p id="demo"></p></span>
+
+                    <script>
+                    let x = Math.floor((Math.random() * 10) + 1);
+                    document.getElementById("demo").innerHTML = x;
+                    </script>  
+
+                    <h3>Estimated Delivery Time:</h3>
+                    <p id="demo1"> </p>
+                    <script>
+                    let x = Math.floor((Math.random() * 10) + 1);
+                    document.getElementById("demo1").innerHTML = x;
+                    </script>  
+
+
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">ITEMS PURCHASED</span>
+                        <span class="cart-price cart-header cart-column">PRICE</span>
+                        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                    </div>
+                    <div class="cart-items">
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="pngegg.png" width="100" height="100">
+                                <span class="cart-item-title">PLACEHOLDER</span>
+                            </div>
+                            <span class="cart-price cart-column">$11.35</span>
+                                <div class="cart-quantity cart-column">
+                                    <input class="cart-quantity-input" type="number" value="1">
+                                    <button class="btn btn-danger" type="button">CANCEL</button>
+                                </div>
+                            </div>
+                            <div class="cart-row">
+                                <div class="cart-item cart-column">
+                                    <img class="cart-item-image" src="pngegg.png" width="100" height="100">
+                                    <span class="cart-item-title">PLACEHOLDER</span>
+                                </div>
+                                <span class="cart-price cart-column">$9.99</span>
+                                <div class="cart-quantity cart-column">
+                                    <input class="cart-quantity-input" type="number" value="2">
+                                    <button class="btn btn-danger" type="button">CANCEL</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Total</strong>
+                            <span class="cart-total-price">$31.33</span>
+                            <p>Every $1 is worth 1 Reward point! Save up to redeem for rewards!</p>               
+                            <h3>Thank you for Dining with Jaz Malvagio <br>Have an Evil day!</h3> 
+                        </div>
+
+                <!-- <div class="container2">
+                    <h1>Receipt</h1> <hr>
+                    <h2>Order Summary</h2> <hr>
+
+                    <p>Items ordered:</p>
+                    <p>Your Total: $</p>
+      
+                    <p>Every $1 is worth 1 Reward point! Save up to redeem for rewards!</p>               
+                    <hr>
+                    <h3>Thank you for Dining with Jaz Malvagio <br>Have an Evil day!</h3> 
+                </div> -->
+
+
+
+                
               </form>              
              </div>
         </div>
         </div>
-        
-        
+
+
+        <h3>Recommended Items</h3><br><hr>
+        <div class="rec-items">
+            <div class="rec-row">
+                <img height="300px" width="300px" src="menuimg/Breadsticks-gv-590x365.webp" alt="">
+                <h4 class="rec-item-title">BreadSticks <span>$4.50</span></h4>
+                <button style="width: 100px;">Add</button>
+            </div>
+            <div class="rec-row">
+                <img height="300px" width="300px" src="menuimg/calamari-dpv-590x365.webp" alt="">
+                <h4>Calamari <span>$4.50</span></h4>
+                <button style="width: 100px;">Add</button>
+            </div>
+            <div class="rec-row">
+                <img height="300px" width="300px" src="menuimg/Dipping-Sauces-dvp-1180X730.jpg" alt="">
+                <h4>Extra Dipping Sauce <span>$4.50</span></h4>
+                <button style="width: 100px;">Add</button>
+            </div>
+        </div>
 
 
             <script src="cart.js"></script>

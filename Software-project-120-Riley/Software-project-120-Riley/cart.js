@@ -150,3 +150,14 @@ users.push({registerUser, registerPassword});
 function feature(){
     alert('please login to use this feature!!')
 }
+
+
+// function addToCartClicked(){
+//     var button = event.target
+//     var shopItem = button.parentElement.parentElement
+//     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+//     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+//     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].imageSrc
+//     addItemToCart(title, price, imageSrc)
+//     updateCartTotal()
+// }
