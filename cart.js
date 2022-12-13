@@ -63,7 +63,6 @@ function addItemToCart(title, price, imageSrc){
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cartItemNames = cartItems.getElementsByClassName('cart-item-titel')
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for(var i = 0; i < cartItemNames.length; i++){
         if (cartItemNames[i].innerText == title) {
@@ -102,3 +101,18 @@ function updateCartTotal(){
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
+
+function showButtonOnLogin() {
+    // Get the login and password from local storage
+    var login = localStorage.getItem('login');
+    var password = localStorage.getItem('password');
+    
+    // Check if the login and password match the expected values
+    if (login === 'admin' && password === 'password') {
+      // Get the button element
+      var button = document.querySelector('button');
+      
+      // Make the button visible
+      button.style.display = 'block';
+    }
+  }
