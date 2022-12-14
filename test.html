@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script src="test.js"></script>
+    <div class="container">
+        <label for="Images"><b>Image</b></label>
+        <input
+        Id="imageSrc"
+          type="text"
+          placeholder=""
+          name="Image"
+          required
+        />
+
+      <div class="container">
+        <label for="Title"><b>Title</b></label>
+        <input
+        id="title"
+          type="text"
+          placeholder="Enter Item Name"
+          name="title"
+          required
+        />
+
+        <label for="price"><b>Price</b></label>
+        <input
+        id="price"
+          type="text"
+          placeholder="Enter price"
+          name="price"
+          required
+        />
+
+        <button id="AddItem" onclick="copyDiv(document.getElementById('imageSrc'), document.getElementById('title'), document.getElementById('price'))">Add To Menu</button>
+      </div>
+    
+</body>
+</html>
