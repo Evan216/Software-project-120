@@ -16,17 +16,19 @@
 <h1 id="Title">Jaz Malvagio</h1>
 <h4>"Evil food for your heroic appertite"</h4>
 <div><ul class="Nav">
-
-<li><a class="Nav" href="Menu.html"><img src="kindpng_6578079.png" alt="" id="signupnavimg"><i>Menu</i></a></li>
-<li><a class="Nav" href="cart.html"><img src="menuimg/pngwing.com (1).png" alt="" id="signupnavimg"><i>Cart</i></a></li>
-<li><a class="Nav" href="signup.html"><img src="menuimg/pngwing.com.png"alt="" id="signupnavimg"><i>Account</i></a></li>
+<li><a class="Nav" href="Signup.html"><img src="kindpng_6578079.png" alt="" id="signupnavimg" id="signupnavimg"></a></li>
+<li><a class="Nav" href="#Login"><i>Login</i></a></li>
+</ul></div>
+<ul id="pagenav">
+<li><a href="Menu.html">Menu</a></li>
+<li><a href="#Account">Account</a></li>
+<li><a href="cart.html">Cart</a></li>
 </ul>
 </div>
-
-</div>
-    </div>
+        </div>
 </section>
 
+    
     <section class="container content-section">
         <h2 class="section-header">CART</h2>
         <div class="cart-row">
@@ -70,9 +72,75 @@
             <a href="https://www.paypal.com/signin" target="_blank"><span ><button class="pay" style="width: 200px;">PayPal</button></span></a>
             <a href="https://account.venmo.com/sign-in" target="_blank"><span ><button class="pay" style="width: 200px;">Venmo</button></span></a>
             <span ><button class="pay" style="width: 200px;"> At store/Cash</button></span>
-            <span ><button class="pay" style="width: 200px;">Credit/Debit</button></span>
-            </div>
+            <span ><button class="pay" style="width: 200px;"><a class="button" href="#popup1">Credit/Debit</a></button>
+            
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2 class="happy">Card Information</h2>                
+                        <a class="close" href="#">&#10004;</a>
+                            <article class="map">
+                                <div class="row7">
+            
+                                         <div class="col7">
+                                             <div class="name"> 
+                                             <form action="index.html" method="get">
+                                                 
+                                                 <label class="name" for="name">Name</label>
+                                                 <input class="side" type="text" id="name" name="name" placeholder="Please input name">
+                                         </form>
+                                     </div>
+                                         <br>
+                                         <div class="name"> 
+                                            <form action="index.html" method="get">
+                                                
+                                                <label class="name" for="name">Address</label>
+                                                <input class="side" type="text" id="name" name="name" placeholder="Please input address">
+                                        </form>
+                                    </div><br>
+                                    <div class="name"> 
+                                        <form action="index.html" method="get">
+                                            
+                                            <label class="name" for="name">Phone Number</label>
+                                            <input class="side" type="text" id="name" name="name" placeholder="Please input number">
+                                    </form>
+                                </div><br>
+                                    <div class="name"> 
+                                        <form action="index.html" method="get">
+                                            
+                                            <label class="name" for="name">Card Number</label>
+                                            <input class="side" type="text" id="name" name="name" placeholder="Please input card number">
+                                    </form>
+                                </div> <br>
+                            </div>
+                            
+                                     <div>
+                                             <label class="name" for="how">What Form Of Credit/Debit?</label>
+                                             <select class="side" id="how" name="how">
+                                                 <option value="friend">Visa</option>
+                                                 <option value="search">Discover</option>
+                                                 <option value="ad">American Express</option>
+                                                 <option value="other">Other</option>
+                                             </select>
+                                     </div>
+                                 <br>
+                                     <div>
+                                         <label class="news" for="news">Remember Card?</label>
+                                         <input class="side"  type="checkbox" id="news" name="news" checked> Yes, please
+                                     </div>
+                                     <br>
 
+
+<!--                              <div>
+                                         <a href="#"><input class="close" type="submit" value="submit!"></a>
+                                             </div>
+                                         </div> -->
+                                     </div>
+                                 </article>
+                             
+                        </div>
+                    </div>
+                </div></span>
+            </div>
 
 
 
@@ -192,7 +260,6 @@
                 <button style="width: 100px;">Add</button>
             </div>
         </div>
-
 
 
             <script src="cart.js"></script>
