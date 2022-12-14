@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="Header.css">
+    <title>Jaz Malvagio</title>
+</head>
+<body>
+<script></script>
+    <!-- Universal? header -->
+    <section class="header">
+      <div class="header">
+  <div id="headertxt">
+  <h1 id="Title">Jaz Malvagio</h1>
+  <h4>"Evil food for your heroic appertite"</h4>
+  <div><ul class="Nav">
+  <li><a class="Nav" href="Menu.html"><img src="kindpng_6578079.png" alt="" id="signupnavimg"><i>Menu</i></a></li>
+  <li><a class="Nav" href="cart.html"><img src="menuimg/pngwing.com (1).png" alt="" id="signupnavimg"><i>Cart</i></a></li>
+  <li><a class="Nav" href="signup.html"><img src="menuimg/pngwing.com.png"alt="" id="signupnavimg"><i>Account</i></a></li>
+  </ul>
+  </div>
+  
+  </div>
+      </div>
+  </section>
+        <button
+    class="btn3" id="top"
+    onclick="document.getElementById('id02').style.display='block'"
+    style="width: 150px"
+     class="btn3" style="width: auto">Login</button>
+     <div id="id02" class="modal">
+      <form
+        class="modal-content animate"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id02').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img src="../Final-Project-115-Version-2/pics/walking gif.gif" alt="Avatar" class="avatar" />
+        </div>
+</section>
+  
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input
+            id="username"
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+  
+          <label for="psw"><b>Password</b></label>
+          <input
+          id="password"
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <button type="submit" onclick="login()">Log in</button></a>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+  
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id02').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+      
+      <br />
+      
+    <button
+    class="btn3" id="b"
+    onclick="document.getElementById('id01').style.display='block'"
+    style="width: 150px"
+  >
+    Sign up
+  </button>
+
+  <div id="id01" class="modal">
+    <form
+      class="modal-content animate"
+      method="post"
+    >
+      <div class="imgcontainer">
+        <span
+          onclick="document.getElementById('id01').style.display='none'"
+          class="close" id="bl"
+          title="Close Modal"
+          >&times;</span
+        >
+        <img src="../Final-Project-115-Version-2/pics/walking gif.gif" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input
+        id="newUserName"
+          type="text"
+          placeholder="Enter Username"
+          name="uname"
+          required
+        />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+        id="newPassword"
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+
+        <button type="submit" id="b" onclick="register()">Sign up</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container" style="background-color: #f1f1f1">
+        <button
+          type="button" id="b"
+          onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn"
+        >
+          Cancel
+        </button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+    </section>
+    <script src="signup.js"></script>
+    </section>
+    <br>
+
+    <button
+    class="btn3" id="top"
+    onclick="document.getElementById('id03').style.display='block'"
+    style="width: 150px"
+     class="btn3" style="width: auto">Manager Login</button>
+     <div id="id03" class="modal">
+      <form
+        class="modal-content animate"
+        action="landingpage.html"
+        method="post"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id03').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img src="../Final-Project-115-Version-2/pics/walking gif.gif" alt="Avatar" class="avatar" />
+        </div>
+  
+        <div class="container">
+          <label for="uname"><b>Manager Last Name</b></label>
+          <input
+            type="text"
+            placeholder="Manager Last Name"
+            name="uname"
+            required
+          />
+  
+          <label for="psw"><b>Manager ID</b></label>
+          <input
+            type="password"
+            placeholder="Enter ID"
+            name="psw"
+            required
+          />
+  
+          <a href="landingpage.html"><button type="submit">Log in</button></a>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+  
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id02').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+      </section>
+    
+
+
+
+
+      <section></section>
+      <script src="signup.js"></script>
+      <script src="login-signup.js"></script>
+      <sript src="page.js"></sript>
+</body>
+</html> 
