@@ -23,7 +23,7 @@ for (var i= 0; i < removeCartItemButtons.length; i++){
         button.addEventListener('click', addToCartClicked)
     }
 
-    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+    // document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
 function purchaseClicked(){
@@ -208,4 +208,21 @@ function showButtonOnLogin() {
       // Make the button visible
       button.style.display = 'block';
     }
+  }
+
+  //receipt
+//   var receipt = contentsection.innerHTML
+//   FinReceipt.innerHTML = contentsection.innerHTML
+function copyDiv(divId) {
+    // Get the div element with the specified divId
+    var div = document.getElementById(contentsection);
+  
+    // Create a new popup window
+    var popup = window.open();
+  
+    // Get the document object for the popup window
+    var doc = popup.document;
+  
+    // Copy the contents of the div into the popup window
+    doc.write(div.innerHTML);
   }
