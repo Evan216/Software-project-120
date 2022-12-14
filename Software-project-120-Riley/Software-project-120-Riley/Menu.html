@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="Header.css">
 </head>
 <body>
-<script src=""></script>
+
 
 <section>
 
@@ -31,6 +31,51 @@
         </div>
 </section>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDiary Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+//dummy//
+    <main>
+        <div class="content">
+            <div></div>
+            <div class="right-content">
+                <h3>Place Your Order</h3>
+
+                <select name="foods" id="foods">
+                    <option value="">Select a dish below</option>
+                </select>
+
+                <div id='user-selection'>
+                    <span id='notification'></span>
+                    <span id='user_selected_text'></span>
+                    <span id='user_selected_value'></span>
+                </div>
+
+                <button id='add_to_cart'>Add To Cart</button>
+                
+                <div id="checkout"></div>
+
+                <div>
+                    <span>TOTAL: </span>
+                    <span  id='tshs'>moneys</span>
+                    <span id="total">0.00</span>
+                </div>
+
+                <button id='reset'>Reset</button>
+            </div>
+
+        </div>
+        
+    </main>
+//dummy//
+
 <section>
     <div class="appetizers">
         <h1>Evil Appetizers</h1> <hr>
@@ -38,7 +83,7 @@
             <img class="app" src="menuimg/Breadsticks-gv-590x365.webp"  alt="">
 
             <p>Evil Bread Stick $4.50</p>
-            <button class="add"  onclick="addToCartItem(item1)">Add Item</button>
+            <button id="add_to_cart" >Add Item</button>
 
         </div>
         <div class="bread">
