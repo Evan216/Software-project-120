@@ -27,6 +27,7 @@ for (var i= 0; i < removeCartItemButtons.length; i++){
 }
 
 function purchaseClicked(){
+    alert('Thank you for your buisness')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()){
         cartItems.removeChild(cartItems.firstChild)
@@ -53,7 +54,6 @@ function addToCartClicked(){
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].imageSrc
     var imageSrc = shopItem.getElementsByClassName('app')[0].imageSrc
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
@@ -63,6 +63,7 @@ function addItemToCart(title, price, imageSrc){
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
+
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for(var i = 0; i < cartItemNames.length; i++){
         if (cartItemNames[i].innerText == title) {
@@ -102,6 +103,98 @@ function updateCartTotal(){
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
 
+let users = [
+    {
+        username: "Evan",
+        password: "1234"
+        },
+    {
+        username: "riley",
+        password: "4321"
+    }    
+]
+
+// login function
+function login() {
+    // retrieve username and password from form
+  let username = document.getElementById('username').value;
+  let password = document.getElementById('password').value;
+
+  if (localStorage.getItem(username) === password) {
+    alert('Login successful');
+
+  }
+    else {
+      alert('Login failed');
+    
+  }
+  
+}
+
+// function to create a new user with name, email, password
+function register() {
+    // store new user data 
+  let registerUser = document.getElementById("newUserName").value;
+    // store new user password
+  let registerPassword = document.getElementById("newPassword").value;
+
+  if (localStorage.getItem(registerUser) !== null) {
+    alert("Username already exists");}
+
+  localStorage.setItem(registerUser, registerPassword);
+  alert("Registration successful");
+
+users.push({registerUser, registerPassword});
+}
+
+// function to alert login needed for access to page
+function feature(){
+    alert('please login to use this feature!!')
+}
+
+
+function copyDivs(fromSectionId, toSectionId) {
+    // Get the 'from' and 'to' sections by their id
+    var fromSection = document.getElementById(fromSectionId);
+    var toSection = document.getElementById(toSectionId);
+  
+    // Get all the divs in the 'from' section
+    var divs = fromSection.getElementsByTagName("div");
+  
+    // Loop through each div
+    for (var i = 0; i < divs.length; i++) {
+      // Create a copy of the div
+      var copy = divs[i].cloneNode(true);
+  
+      // Add the copy to the 'to' section
+      toSection.appendChild(copy);
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function showReceipt() {
+//     // Get the cart items from the cart page function
+//     var cart = getCartItems();
+  
+//     // Calculate the total price of the cart items
+//     var total = 0;
+//     for (var i = 0; i < cart.length; i++) {
+//       total += cart[i].price;
+//     }
+  
+// 
 function showButtonOnLogin() {
     // Get the login and password from local storage
     var login = localStorage.getItem('login');

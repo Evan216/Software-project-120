@@ -1,3 +1,4 @@
+
 const users = new Map([["Admin", "Riley"], ["key2", "value2"]]);
 localStorage.setItem("users", JSON.stringify(users));
 // login function
@@ -5,6 +6,7 @@ function login() {
     // retrieve username and password from form
   let username = document.getElementById('username').value;
   let password = document.getElementById('password').value;
+
 
   if (username  == "Admin") {
     if (password == "Riley")
@@ -25,6 +27,7 @@ function login() {
   }
   
 }
+
 // function to create a new user with name, email, password
 function register(username,password) {
     // store new user data 
@@ -34,6 +37,7 @@ function register(username,password) {
 
   if (localStorage.getItem(registerUser) !== null) {
     alert("Username already exists");}
+
 
  else localStorage.setItem(registerUser, registerPassword);
  window.location.href="Signup.html"
@@ -46,6 +50,7 @@ users.push([registerUser, registerPassword]);
 // function to alert login needed for access to page
 function feature(){
     alert('please login to use this feature!!')
+
 }
 
 var modal = document.getElementById('id01');

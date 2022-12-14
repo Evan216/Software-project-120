@@ -19,7 +19,7 @@ html {
 }
 
 .bread, .main, .dess {
-    float: left;
+    float:left;
     margin: 5vh;
 }
 
@@ -130,7 +130,7 @@ span.psw {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color:#888; /* Fallback color */
-  background-color: #888; /* Black w/ opacity */
+  background-color: #888); /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -188,6 +188,11 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
+
+
+.btn3 {
+    
+}
 
 #sig
 {
