@@ -54,7 +54,7 @@ function addToCartClicked(){
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].imageSrc
+    var imageSrc = shopItem.getElementsByClassName('app')[0].imageSrc
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
@@ -63,7 +63,8 @@ function addItemToCart(title, price, imageSrc){
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cartItemNames = cartItems.getElementsByClassName('cart-item-titel')
+
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for(var i = 0; i < cartItemNames.length; i++){
         if (cartItemNames[i].innerText == title) {
             alert('This item is already added!!')
@@ -194,3 +195,17 @@ function copyDivs(fromSectionId, toSectionId) {
 //     }
   
 // 
+function showButtonOnLogin() {
+    // Get the login and password from local storage
+    var login = localStorage.getItem('login');
+    var password = localStorage.getItem('password');
+    
+    // Check if the login and password match the expected values
+    if (login === 'admin' && password === 'password') {
+      // Get the button element
+      var button = document.querySelector('button');
+      
+      // Make the button visible
+      button.style.display = 'block';
+    }
+  }
