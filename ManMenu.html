@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="Menu.css">
     <title>Evil Menu</title>
+    <script src="Manmenu.js"></script>
     <link rel="stylesheet" href="Menu.css">
     <link rel="stylesheet" href="Header.css">
 </head>
@@ -26,15 +27,49 @@
   </div>
 </section>
 
-<section id="appetizers">
-    <div class="appetizers">
+<section id="addItembtns">
+  <div class="container">
+    <label for="Images"><b>Image</b></label>
+    <input
+    Id="imageSrc"
+      type="text"
+      placeholder=""
+      name="Image"
+      required
+    />
+
+  <div class="container">
+    <label for="Title"><b>Title</b></label>
+    <input
+    id="title"
+      type="text"
+      placeholder="Enter Item Name"
+      name="title"
+      required
+    />
+
+    <label for="price"><b>Price</b></label>
+    <input
+    id="price"
+      type="text"
+      placeholder="Enter price"
+      name="price"
+      required
+    />
+
+    <button id="AddItem" onclick="copyDiv(document.getElementById('imageSrc'), document.getElementById('title'), document.getElementById('price'))">Add To Menu</button>
+  </div>
+</div>
+</section>
+
+<section>
+    <div >
         <h1>Evil Appetizers</h1> <hr>
-        <div class="Menu-Items"><div class="bread"> 
+        <div id="appetizers"><div class="bread"> 
             <img class="app" src="menuimg/Breadsticks-gv-590x365.webp"  alt="">
             <div class="title">Evil Bread Stick </div><div class="price">$4.50</div>
             <button><a class="add" href="">Add Item</a></button>
         </div>
-    </div>
         <div class="bread">
             <img class="app" src="menuimg/calamari-dpv-590x365.webp" alt="">
             <p class="Title">Evil Calamari</p><div class="price">$11.99</div>
@@ -66,74 +101,7 @@
             <button><a class="add" href="">Add Item</a></button> <br>
 
         </div>
-        <div>
-        <button
-        id="addtomenu"
-    onclick="document.getElementById('id01').style.display='block'"
-    style="width: 150px"
-  >
-    Add Item to Menu
-  </button>
-
-  <div id="id01" class="modal">
-    <form
-      class="modal-content animate"
-      method="post"
-    >
-      <div class="imgcontainer">
-        <span
-          onclick="document.getElementById('id01').style.display='none'"
-          class="close" id="bl"
-          title="Close Modal"
-          >&times;</span
-        >
-        <img src="../Final-Project-115-Version-2/pics/walking gif.gif" alt="Avatar" class="avatar" />
-      </div>
-
-      <div class="container">
-        <label for="Images"><b>Image</b></label>
-        <input
-        Id="imageSrc"
-          type="file"
-          placeholder=""
-          name="Image"
-          required
-        />
-
-      <div class="container">
-        <label for="Title"><b>Title</b></label>
-        <input
-        id="title"
-          type="text"
-          placeholder="Enter Item Name"
-          name="title"
-          required
-        />
-
-        <label for="price"><b>Price</b></label>
-        <input
-        id="price"
-          type="text"
-          placeholder="Enter price"
-          name="price"
-          required
-        />
-
-        <button id="AddItem" onclick="copyDiv(document.getElementById('imageSrc').value, document.getElementById('title').value, document.getElementbyid('price').value)">Add To Menu</button>
-      </div>
-
-      <div class="container" style="background-color: #f1f1f1">
-        <button
-          type="button" id="b"
-          onclick="document.getElementById('id01').style.display='none'"
-          class="cancelbtn"
-        >
-          Cancel
-        </button>
-      </div>
-    </div>
-    </form>
-  </div>
+        
     </section>
 
 <section>
@@ -674,7 +642,7 @@
 
 </section>
 
-<script src="Manmenu.js"></script>
+
 <a href=""><img class="arrow" src="https://ps.w.org/wpfront-scroll-top/assets/icon.svg?rev=1534312" alt="scroll up"></a>
 
 </section>
