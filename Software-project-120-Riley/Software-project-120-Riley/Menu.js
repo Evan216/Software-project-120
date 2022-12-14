@@ -1,93 +1,64 @@
-var body  = document.querySelector('.right-content');
-var foods  = document.querySelector('#foods');
-var addToCardBtn  = document.querySelector('#add_to_cart');
-var resetBtn  = document.querySelector('#reset');
-var checkout  = document.querySelector('#checkout');
-var totalDiv  = document.querySelector('#total');
-var tshsSpan  = document.querySelector('#moneys');
-var display_text = document.querySelector('#user_selected_text')
-var display_value = document.querySelector('#user_selected_value')
-var notification = document.querySelector('#notification')
-var total = 0;
-var total_item = 0;
+var x = {};
 
-// initialize class to Button for styling
-addToCardBtn.classList.add('hidden');
-resetBtn.classList.add('hidden');
+function addItemToCart(e) {
+    // var cartItems = document.getElementsByClassName('cart-items')[0]
+    // var cartRow = document.createElement('div')
+    // cartRow.classList.add('cart-row')
+var cartItems = e;
+console.log(cartItems)
+    // var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    // for(var i = 0; i < cartItemNames.length; i++){
+    //     if (cartItemNames[i].innerText == title) {
+    //         alert('This item is already added!!')
+    //         return
 
-// list of all foods
-var food_list =[
-    {name: 'Ugali Nyama', price:1500.00},
-    {name: 'Wali Nyama', price:2000.00},
-    {name: 'Pilau Nyama', price:2500.00},
-    {name: 'Biriani Nyama', price:5000.00},
-    {name: 'Biriani Kuku', price:7000.00},
-]
+    var cartRowContents = `<div class="appetizers bread">
+    <img class="app" src="${imageSrc}" width="100" height="100">
+    <span class="title">${title}</span>
+</div>
+<span class="price cart-column">${price}</span>
+<div class="cart-quantity cart-column">
+    <input class="cart-quantity-input" type="number" value="1">
+    <button class="add" type="button">REMOVE</button>
+</div>`
+    cartRow.innerHTML = cartRowContents
+    console.log(cartRow)
+    cartItems.appendChild(cartRow)
+    console.log("cartRow")
+    // cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 
-// Populate select tag with list of foods for user to select
-for(var i = 0; i < food_list.length; i++){
-    var newOption = document.createElement('option');
-    newOption.value = food_list[i].price;
-    newOption.innerHTML = food_list[i].name + ': moneys ' + Number(food_list[i].price).toFixed(2);
-    foods.appendChild(newOption);
+    x.push('cartRowContents')
+    let Pushtocart = JSON.stringify(x)
+    localStorage.setItem('Pushtocart')
 }
 
-// create object variable
-user_selection = {value:null, text:null};
+function addToCartClicked() {
+    console.log("1")
+    var button = event.target
+    var shopItem = button.parentElement
+    var title = shopItem.getElementsByClassName('title')[0].innerText
+    var price = shopItem.getElementsByClassName('price')[0].innerText
+    var imageSrc = shopItem.getElementsByClassName('app')[0].imageSrc
+    addItemToCart(title, price, imageSrc)
+    console.log("1")
+    //updateCartTotal()
 
-// Listen select tag change event when user select item
-foods.addEventListener("change", function(){
-    var selected_item = document.querySelector('#foods option:checked');
-    user_selection.value = selected_item.value;
-    user_selection.text = selected_item.text;
-
-    // if condition check if user select an item
-    if (Number(user_selection.value) > 0){
-        notification.innerHTML ='You have selected: ';
-        display_text.innerHTML = user_selection.text;
-        addToCardBtn.classList.remove('hidden');
-        resetBtn.classList.remove('hidden');
-        addToCardBtn.classList.add('btnStyle');
-        resetBtn.classList.add('btnStyle');
-    }else {
-        notification.innerHTML ="No dish selected";
-        display_text.innerHTML = null;
-        display_value.innerHTML = null;
-        addToCardBtn.classList.add('hidden');
-        resetBtn.classList.add('hidden');
+}
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName("cart-items")[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var total = 0
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')
+        [0]
+        var price = parseFloat(priceElement.innerText.replace('$', ''))
+        var quantity = quantityElement.value
+        total = total + (price * quantity)
     }
-
-})
-
-
-// Listen button event click
-addToCardBtn.addEventListener('click', () => {
-    // if condition allow 5 items only to be added to Cart 
-    if (total_item < 25){
-        var checkoutItem = document.createElement('p');
-        checkoutItem.innerHTML = user_selection.text;
-        checkout.appendChild(checkoutItem);
-        total_item++;
-        total+= parseFloat(user_selection.value);
-        totalDiv.innerHTML = total.toFixed(2);
-    } else {
-        alert("We apologize, you can't add more item because you already exceeded the maximum order");
-    }
-
-})
-
-
-// Listen button event click
-resetBtn.addEventListener('click',  () =>{
-    var total = 0;
-    var total_item = 0;
-    foods.selectedIndex = '';
-    checkout.innerHTML = '';
-    notification.innerHTML ="No dish selected";
-    display_value.innerHTML ="";
-    display_text.innerHTML ="";
-    totalDiv.innerHTML = "0.00";
-    tshsSpan.innerHTML = "moneys";
-    addToCardBtn.classList.add('hidden');
-    resetBtn.classList.add('hidden');
-})
+    total = Math.round(total * 100) / 100
+    document.getElementsById('cart-total-price')[0].innerText = '$' + total
+}
+element.addEventListener("type-of-event", functionToExecute)

@@ -27,7 +27,6 @@ for (var i= 0; i < removeCartItemButtons.length; i++){
 }
 
 function purchaseClicked(){
-    alert('Thank you for your buisness')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()){
         cartItems.removeChild(cartItems.firstChild)
@@ -55,6 +54,7 @@ function addToCartClicked(){
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].imageSrc
+    var imageSrc = shopItem.getElementsByClassName('app')[0].imageSrc
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
@@ -63,7 +63,7 @@ function addItemToCart(title, price, imageSrc){
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cartItemNames = cartItems.getElementsByClassName('cart-item-titel')
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for(var i = 0; i < cartItemNames.length; i++){
         if (cartItemNames[i].innerText == title) {
             alert('This item is already added!!')
@@ -102,55 +102,20 @@ function updateCartTotal(){
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
 
-let users = [
-    {
-        username: "Evan",
-        password: "1234"
-        },
-    {
-        username: "riley",
-        password: "4321"
-    }    
-]
-
-// login function
-function login() {
-    // retrieve username and password from form
-  let username = document.getElementById('username').value;
-  let password = document.getElementById('password').value;
-
-  if (localStorage.getItem(username) === password) {
-    alert('Login successful');
-
-  }
-    else {
-      alert('Login failed');
+function showButtonOnLogin() {
+    // Get the login and password from local storage
+    var login = localStorage.getItem('login');
+    var password = localStorage.getItem('password');
     
+    // Check if the login and password match the expected values
+    if (login === 'admin' && password === 'password') {
+      // Get the button element
+      var button = document.querySelector('button');
+      
+      // Make the button visible
+      button.style.display = 'block';
+    }
   }
-  
-}
-
-// function to create a new user with name, email, password
-function register() {
-    // store new user data 
-  let registerUser = document.getElementById("newUserName").value;
-    // store new user password
-  let registerPassword = document.getElementById("newPassword").value;
-
-  if (localStorage.getItem(registerUser) !== null) {
-    alert("Username already exists");}
-
-  localStorage.setItem(registerUser, registerPassword);
-  alert("Registration successful");
-
-users.push({registerUser, registerPassword});
-}
-
-// function to alert login needed for access to page
-function feature(){
-    alert('please login to use this feature!!')
-}
-
 
 // function addToCartClicked(){
 //     var button = event.target

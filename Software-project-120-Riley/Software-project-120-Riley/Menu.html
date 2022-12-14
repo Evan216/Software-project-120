@@ -8,73 +8,23 @@
     <link rel="stylesheet" href="Header.css">
 </head>
 <body>
+<script src=""></script>
+<section class="header">
+  <div class="header">
+<div id="headertxt">
+<h1 id="Title">Jaz Malvagio</h1>
+<h4>"Evil food for your heroic appertite"</h4>
+<div><ul class="Nav">
+  <script src="Menu.js"></script>
+<li><a class="Nav" href="Menu.html"><img src="kindpng_6578079.png" alt="" id="signupnavimg"><i>Menu</i></a></li>
+<li><a class="Nav" href="cart.html"><img src="menuimg/pngwing.com (1).png" alt="" id="signupnavimg"><i>Cart</i></a></li>
+<li><a class="Nav" href="signup.html"><img src="menuimg/pngwing.com.png"alt="" id="signupnavimg"><i>Account</i></a></li>
+</ul>
+</div>
 
-
-<section>
-
-
-    <section class="header">
-        <div class="header">
-            <div id="headertxt">
-                <h1 id="Title">Jaz Malvagio</h1>
-                <h4>"Evil food for your heroic appertite"</h4>
-                <div><ul class="Nav">
-                <li><a class="Nav" href="Signup.html"><img src="kindpng_6578079.png" alt="" id="signupnavimg" id="signupnavimg"></a></li>
-                <li><a class="Nav" href="#Login"><i>Login</i></a></li>
-                </ul></div>
-                <ul id="pagenav">
-                <li><a href="Menu.html">Menu</a></li>
-                <li><a href="#Account">Account</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                </ul>
-            </div>
-        </div>
+</div>
+  </div>
 </section>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodDiary Restaurant</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-//dummy//
-    <main>
-        <div class="content">
-            <div></div>
-            <div class="right-content">
-                <h3>Place Your Order</h3>
-
-                <select name="foods" id="foods">
-                    <option value="">Select a dish below</option>
-                </select>
-
-                <div id='user-selection'>
-                    <span id='notification'></span>
-                    <span id='user_selected_text'></span>
-                    <span id='user_selected_value'></span>
-                </div>
-
-                <button id='add_to_cart'>Add To Cart</button>
-                
-                <div id="checkout"></div>
-
-                <div>
-                    <span>TOTAL: </span>
-                    <span  id='tshs'>moneys</span>
-                    <span id="total">0.00</span>
-                </div>
-
-                <button id='reset'>Reset</button>
-            </div>
-
-        </div>
-        
-    </main>
-//dummy//
 
 <section>
     <div class="appetizers">
@@ -82,39 +32,41 @@
         <div class="bread"> 
             <img class="app" src="menuimg/Breadsticks-gv-590x365.webp"  alt="">
 
-            <p>Evil Bread Stick $4.50</p>
-            <button id="add_to_cart" >Add Item</button>
+            <div class="title">Evil Bread Stick</div><div class="price">$4.50</div> 
+            <button class='add' onclick="addToCartClicked(this)">Add Item</button>
+              
+            </div>
 
         </div>
         <div class="bread">
             <img class="app" src="menuimg/calamari-dpv-590x365.webp" alt="">
             <p>Evil Calamari $11.99</p>
-            <button><a class="add" onclick="addToCartItem(item2)">Add Item</a></button>
+            <button><a class="add" href="">Add Item</a></button>
         </div>
         <div class="bread">
             <img class="app" src="menuimg/Lasagna-Fritta-gv-590x365.webp" alt="">
             <p>Evil Lasagna Fritta $10.50</p>
-            <button><a class="add" onclick="addToCartItem(item3)">Add Item</a></button>
+            <button><a class="add" href="">Add Item</a></button>
         </div>
         <div class="bread">
             <img class="app" src="menuimg/Spinach-Artichoke-Dip-gv-590x365.webp" alt="">
             <p>Evil Spinach Artichoke Dip $10.30</p>
-            <button><a class="add" onclick="addToCartItem(item4)">Add Item</a></button>
+            <button><a class="add" href="">Add Item</a></button>
         </div>
         <div class="bread">
             <img class="app" src="menuimg/toasted-ravioli-gv-590x365.webp" alt="">
             <p>Evil Toasted Ravioli $7.99</p>
-            <button><a class="add" onclick="addToCartItem(item5)">Add Item</a></button>
+            <button><a class="add" href="">Add Item</a></button>
         </div>
         <div class="bread">
             <img class="app" src="menuimg/soup-array-dpv-590x365.webp" alt="">
             <p>Evil Soup $7.99</p>
-            <button><a class="add" onclick="addToCartItem(item6)">Add Item</a></button>
+            <button><a class="add" href="">Add Item</a></button>
         </div>
         <div class="bread">
             <img class="app" src="menuimg/Dipping-Sauces-dvp-1180X730.jpg" alt="">
             <p>Evil Side Of Dipping Sauces $2.50</p>
-            <button><a class="add" onclick="addToCartItem(item7)">Add Item</a></button> <br>
+            <button><a class="add" href="">Add Item</a></button> <br>
 
         </div>
     </div>
@@ -221,7 +173,6 @@
              </div>
             <button><a target="_blank" class="add" href="cart.html">Add Item</a></button>
         </div>
-
         <div class="main">
             <img class="app" src="menuimg/HerbGrilledSalmon_v1_gv.webp" alt="">
             <p>Evil Grilled Salmon $14.99</p>
@@ -373,7 +324,7 @@
             <button><a target="_blank" class="add" href="cart.html">Add Item</a></button>
         </div>
         </div>
-        <div class= "main">
+        <div class="main">
             <img class="app" src="menuimg/Ravioli-Carbonara-gv-590x365.webp" alt="">
             <p>Evil Ravioli Carbonara $11.99</p>
 
@@ -475,7 +426,6 @@
             <button><a target="_blank" class="add" href="cart.html">Add Item</a></button>
         </div>
         </div>
-
         <div class="main">
             <img src="menuimg/dinner-chicken-parm-dpv-590x365.webp" alt="" class="app">
             <p>Evil Chicken Parmigiana $11.99</p>
@@ -637,7 +587,7 @@
             <h1>Evil Dessert</h1> <hr>
                 <div class="dess">
                 <img src="menuimg/black-tie-mousse-cake-dpv-590x365.webp" alt="" class="app">                    <p>Evil Black Tie Mousse Cake $4.50</p>
-                <button><a class="add" href="">Add Item</a></button>
+                <button onclick="addItemToCart()">Add Item</a></button>
             </div>
             <div class="dess">
                     <img src="menuimg/Strawberry-Cheesecake-gv-590x365.webp" alt="" class="app">
@@ -664,8 +614,8 @@
 <a href=""><img class="arrow" src="https://ps.w.org/wpfront-scroll-top/assets/icon.svg?rev=1534312" alt="scroll up"></a>
 
 </section>
+
     <script src="Menu.js"></script>
-    <script src="custom.js"></script>
     <link rel="stylesheet" href="Menu.css">
 
 </body>
