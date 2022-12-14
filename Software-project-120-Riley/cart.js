@@ -152,13 +152,45 @@ function feature(){
 }
 
 
-// function addToCartClicked(){
-//     var button = event.target
-//     var shopItem = button.parentElement.parentElement
-//     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-//     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-//     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].imageSrc
-//     addItemToCart(title, price, imageSrc)
-//     updateCartTotal()
-// }
+function copyDivs(fromSectionId, toSectionId) {
+    // Get the 'from' and 'to' sections by their id
+    var fromSection = document.getElementById(fromSectionId);
+    var toSection = document.getElementById(toSectionId);
+  
+    // Get all the divs in the 'from' section
+    var divs = fromSection.getElementsByTagName("div");
+  
+    // Loop through each div
+    for (var i = 0; i < divs.length; i++) {
+      // Create a copy of the div
+      var copy = divs[i].cloneNode(true);
+  
+      // Add the copy to the 'to' section
+      toSection.appendChild(copy);
+    }
+  }
+  
 
+
+
+
+
+
+
+
+
+
+
+
+
+// function showReceipt() {
+//     // Get the cart items from the cart page function
+//     var cart = getCartItems();
+  
+//     // Calculate the total price of the cart items
+//     var total = 0;
+//     for (var i = 0; i < cart.length; i++) {
+//       total += cart[i].price;
+//     }
+  
+// 
