@@ -1,39 +1,26 @@
-var addItemClass = 0;
-function addToCart(item) {
-  addItemId += 1;
-  var selectedItem = document.createElement('div');
-  selectedItem.classList.add('div');
-  selectedItem.setAttribute('class', addItemClass);
-  var img = document.createElement('img');
-  img.setAttribute('src', item.children[0].currentSrc);
-  var title = document.createElement('div');
-  title.innerText = item.children[1].innerText;
-  var label = document.createElement('div');
-  label.innerText = item.children[2].children[0].innerText;
-  var select = document.createElement('span');
-  select.innerText = item.children[2].children[1].value;
-  label.append(select);
-  var delBtn = document.createElement('button');
-  delBtn.innerText = 'Delete';
-  delBtn.setAttribute = ('onclick', 'del(+addItemId+)');
-  var cartItems = document.getElementById('title');
-  selectedItem.append(img);
-  selectedItem.append(title);
-  selectedItem.append(label);
-  selectedItem.append(delBtn);
-  cartItems.append(selectedItem);
+var menutems = JSON.parse(localStorage.getItem('foodItems'))
 
-  var addItem = document.getElementById('bread', 'entrees', 'main', 'dessert').value;
-  var cart_Items = document.getElementById('cart-items').value;
+function renderManagerMenu(<div class="">
+<img class="app" src="${menuItem.image}" alt="">
+<div class="title">${menuItem.name}</div><div class="price"> ${menuItem.price}</div>
+<button><a class="add" href="">Add Item</a></button>
+</div>) {
 
-  if (localStorage.getItem(addItem) === cart_Items) {
-    selectedItem.classList.add('cartImg');
-    selectedItem.setAttribute('id', addItemClass);
-
-  }
-
-}
-
-function del(item) {
-  document.getElementById(item).remove();
-}
+    menulist.innerHTML = "";
+    foodItems.forEach((foodItem) => {
+        menulist.innerHTML += 
+            <div class="menulist">
+                <div class="categories">
+                    <div class="shop-item">
+                        <ion-icon class="removeButton" onclick="removeFromMenu(${foodItem.id})" name="close-circle-outline">Remove</ion-icon>
+                        <img class="shop-item-image" src="${foodItem.image}" alt="">
+                        <h3 class="itemName">${foodItem.name}</h3>
+                        <div class="shop-item-details">
+                        <span class="shop-item-price">${foodItem.price}</span> <br> 
+                        <button class="btn btn-primary shop-item-button" type="button">Item back to cart</button>
+                        </div>
+                    </div>
+            <div>
+        ;
+    });
+};
