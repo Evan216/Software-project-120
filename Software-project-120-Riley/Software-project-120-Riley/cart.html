@@ -10,6 +10,7 @@
 </head>
 <body>
 <script src="cart.js"></script>
+<script src="Menu.js"></script>
     <section class="header">
         <div class="header">
 <div id="headertxt">
@@ -36,8 +37,8 @@
             <span class="cart-price cart-header cart-column">PRICE</span>
             <span class="cart-quantity cart-header cart-column">QUANTITY</span>
         </div>
-        <div class="cart-items">
-            <div class="cart-row">
+        <div id="Receipt">
+            <!-- <div class="cart-row">
                 <div class="cart-item cart-column">
                     <img class="cart-item-image" src="pngegg.png" width="100" height="100">
                     <span class="cart-item-title">PLACEHOLDER</span>
@@ -47,8 +48,8 @@
                         <input class="cart-quantity-input" type="number" value="1">
                         <button class="btn btn-danger" type="button">REMOVE</button>
                     </div>
-                </div>
-                <div class="cart-row">
+            </div>
+            <div class="cart-row">
                     <div class="cart-item cart-column">
                         <img class="cart-item-image" src="pngegg.png" width="100" height="100">
                         <span class="cart-item-title">PLACEHOLDER</span>
@@ -56,10 +57,21 @@
                     <span class="cart-price cart-column">$9.99</span>
                     <div class="cart-quantity cart-column">
                         <input class="cart-quantity-input" type="number" value="2">
-                        <button class="btn btn-danger" type="button">REMOVE</button>
+                        <button class="btn btn-danger" onclick="updateCartTotal()" type="button">REMOVE</button>
                     </div>
-                </div>
-            </div>
+            </div> -->
+            <script>
+                cartcontainer = document.getElementById('Receipt');
+                cart = JSON.parse(localStorage.getItem('cart'))
+                console.log(cart)
+                var length = cart.length
+                console.log(length);
+                for (i = 0; i < length; i++) {
+                    console.log(cart[i])
+                    let text = document.getElementById('Receipt')
+                    text.innerHTML = cart[i] + text.innerHTML;
+                }
+            </script>
             <div class="cart-total">
                 <strong class="cart-total-title">Total</strong>
                 <span class="cart-total-price">$31.33</span>
@@ -106,7 +118,7 @@
                     <h3>Estimated Delivery Time:</h3>
                     <p id="demo1"> </p>
                     <script>
-                    let x = Math.floor((Math.random() * 10) + 1);
+                    let xz = Math.floor((Math.random() * 10) + 1);
                     document.getElementById("demo1").innerHTML = x;
                     </script>  
 
@@ -120,7 +132,7 @@
                         <div class="cart-row">
                             <div class="cart-item cart-column">
                                 <img class="cart-item-image" src="pngegg.png" width="100" height="100">
-                                <span class="cart-item-title">PLACEHOLDER</span>
+                                <span class="cart-item-title">Delivery</span>
                             </div>
                             <span class="cart-price cart-column">$11.35</span>
                                 <div class="cart-quantity cart-column">

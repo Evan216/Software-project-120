@@ -19,7 +19,7 @@ html {
 }
 
 .bread, .main, .dess {
-    float: left;
+    float:left;
     margin: 5vh;
 }
 
