@@ -38,6 +38,7 @@ function removeCartItem(event){
  var buttonClicked = event.target
        buttonClicked.parentElement.parentElement.remove()
        updateCartTotal()
+    var update = JSON.parse(localStorage.getItem('cart'))
 }
 
 function quantityChanged(event) {
