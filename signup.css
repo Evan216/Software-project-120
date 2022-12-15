@@ -1,12 +1,15 @@
  
 body
 {
+  
   color: white;
-    background-image: url(storefront.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(storefront.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 #snakey
+
 {
     position:fixed;
     top: 20%;
@@ -14,10 +17,7 @@ body
     overflow:hidden;
     pointer-events:none
 }
-#sig
-{
-  
-}
+
 .cat
 {
      margin-top: 20%;
